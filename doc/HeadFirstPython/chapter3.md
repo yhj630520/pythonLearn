@@ -7,7 +7,8 @@
 4.循环输出字典中的数据
 
 ```python
-     for k in found: 
+  found={'apple':1,'banan':2}   
+  for k in found: 
        print(k," " ,  found[k]  )
 ```
 ​     循环获取的k 为键
@@ -21,3 +22,4 @@
      found.setdefault(‘apple’,0) 
 
 8.集合（不允许有重复，查找速度快） 
+
