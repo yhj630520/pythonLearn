@@ -21,7 +21,7 @@
 
      found.setdefault(‘apple’,0) 
 
-8.集合（不允许有重复，查找速度快） 
+8.集合（set）不允许有重复，查找速度快
 
 ```python
 # 创建一个集合
@@ -44,4 +44,16 @@ print(coll.difference(set(word)))
 # 找出共同存在的数据集合： {'a'}
 print(coll.intersection(set(word)))
 ```
+
+9.元组（tuple）一旦创建和填充数据，元组就不能改变
+
+```python
+#创建元组
+voTuple=('a', 'e', 'i', 'o', 'u')
+#元组创建需要再后面添加','。不然单个会变成字符串
+# 错误方式voTest=('abc') type(voTest) ==> str
+# 正确方式voTest=('abc',) type(voTest) ==> tuple
+```
+
+函数可能接收和返回元组参数，即使只是接收或返回单个对象。
 
