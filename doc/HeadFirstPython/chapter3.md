@@ -30,8 +30,18 @@ print(coll)
 #输出结果 {'o', 'e', 'U', 'i', 'a', 'u'} ，去除了重复数据且输出顺序随机
 print(sorted(coll))
 #输出结果 ['U', 'a', 'e', 'i', 'o', 'u'],去除了重复数据且排序输出为集合
+```
 
+常用内置方法：
 
-
+```python
+# set快速创建集合
+print(set(word))
+# 两个集合取并集： {'o', 'j', 'e', 'i', 'a', 'U', 'c', 'u', 'k'}
+print(coll.union(set(word)))
+# 找出存在于coll但是set(word)集合不存在的集合 {'o', 'i', 'u', 'U', 'e'}
+print(coll.difference(set(word)))
+# 找出共同存在的数据集合： {'a'}
+print(coll.intersection(set(word)))
 ```
 

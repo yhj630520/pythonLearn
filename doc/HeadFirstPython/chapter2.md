@@ -1,7 +1,3 @@
----
-typora-root-url: ./img
----
-
 1.python中数字、字符串、函数、模块所有一切都是对象，而且所有对象都可以动态赋给任何变量
 
 2.列表【list】：有序的可变对象集合。异构的，可以保持不同类型对象
@@ -33,10 +29,9 @@ copy：复制一份新数据
 
 ![](./img/8D0CC7C3-DED0-45D5-97C9-A93EBDB3B5C1.png)
 
+​    3.列表文档查看：
+​        help(list)可以访问列表中的文档 help(list.insert)查看列表insert方法的文档
 
-​        
-    3.列表文档查看：
-        help(list)可以访问列表中的文档 help(list.insert)查看列表insert方法的文档
-    
-    4.python支持中括号记法，而且支持负索引值。（正索引值从左向右0开始，负索引从右向左-1开始）。同时支持start（开始值[包括]：默认值0）、stop（结束值[不包括]：列表允许的最大值）和step（步长值，默认值1）
-        found[0]、found[-1]、found[-2]、found[0:10:3]、found[3:]、found[:10]、found[ : : 2 ]
+​    4.python支持中括号记法，而且支持负索引值。（正索引值从左向右0开始，负索引从右向左-1开始）。同时支持start（开始值[包括]：默认值0）、stop（结束值[不包括]：列表允许的最大值）和step（步长值，默认值1）
+​    found[0]、found[-1]、found[-2]、found[0:10:3]、found[3:]、found[:10]、found[ : : 2 ]
+
