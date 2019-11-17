@@ -43,8 +43,9 @@ search(letters='xyz',phrase='galaxy')
 
 7.使用setuptool安装模块到site-packages中
 
+第一步：创建一个发布描述：至少为模块创建两个描述文件：setup.py和README.txt
+
 ```python
-#第一步：创建一个发布描述：至少为模块创建两个描述文件：setup.py和README.txt
 from setuptools import setup
 
 setup(
@@ -56,12 +57,43 @@ setup(
     url='yinhaijun.com',
     py_modules=['vsearch'],#指定需要包含的.py文件列表
 )
-
-#第二步：生成一个发布文件，在包路径下执行命令
-python3  setup.py sdist
-成功会在当前目录下生成 dist文件夹 里面的vsearch-1.0.tar.gz 就是可安装文件
-#第三步：使用安装发布文件
-#在dist文件夹目录下执行命令：
-python3 -m pip install vsearch-1.0.tar.gz
-
 ```
+
+第二步：生成一个发布文件，在包路径下执行命令
+
+```shell
+python3  setup.py sdist
+```
+
+成功会在当前目录下生成 dist文件夹 里面的vsearch-1.0.tar.gz 就是可安装文件
+
+第三步：使用安装发布文件：在dist文件夹目录下执行命令：
+
+```shell
+python3 -m pip install vsearch-1.0.tar.gz
+```
+
+8.python的函数参数语义即支持**按值调用**也支持**按引用调用**。
+
+​	1.如果变量指示一个**可变的**值，就会应用**按引用调用**语义
+
+​	2.如果数据是**不可变**的，则会应用**按值调用**语义
+
+列表、字典、集合（都是可变的）总是会按引用传入函数，字符串、整数和元组（不可变）总是会按值传入参数
+
+9.使用pytest和检查代码PEP8兼容性
+
+​	1.安装pytest和 pytest-pep8
+
+```shell
+pip3 install pytest 
+
+pip3 install pytest-pep8 
+```
+
+​	2.检查代码兼容性：
+
+```shell
+py.test --pep8 vsearch.py
+```
+
