@@ -33,3 +33,21 @@ app.run()
 
 **\_\_name\_\_ **: 单在当前活动命名空间时总是为：**\_\_main\_\_ ** ，如果作为一个模块导入就是模块的名字
 
+3.Flask中请求redirect和多route
+
+```python
+#使用redirect进行重定向 import redirect
+@app.route('/')
+def hello() -> '302':
+    return redirect('/entry')
+
+#多路径支持
+@app.route('/')
+@app.route('/entry')
+def entry_page() -> 'html':
+    return render_template('entry.html', the_title='Welcome to search4letters on the web!')
+
+```
+
+
+
