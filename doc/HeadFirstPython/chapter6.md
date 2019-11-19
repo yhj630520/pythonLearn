@@ -25,4 +25,13 @@ todos.close()
 
 **'+'**：表示会打开文件来完成读写（**'x+b'**: 读写一个新的二进制文件）
 
-3.**with**语句
+3.**with**语句管理上下文
+
+```python
+# 使用with结束，系统会调用close()
+with open('todos.txt') as tasks:
+    for chore in tasks:
+        print(chore, end='')
+```
+
+4.
