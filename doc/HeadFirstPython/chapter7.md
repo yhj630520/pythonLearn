@@ -24,5 +24,7 @@ CREATE TABLE log (
 );
 #查看表结构
 describe log;
+
 ```
 
+2. **import**语句不要在函数内部使用，这会导致每一次函数调用都会进行一次读入和执行
