@@ -35,6 +35,30 @@ c.increase()
 
 c.increase() 会被解释器转化为：**CountFormBy.increase(c)** 。所以每个方法都至少有一个参数（约定为：self）。
 
+#### 5.python中属性初始化
+
+在python中，在对变量赋值之前不能使用这个变量，而不论在哪里使用。使用变量都必须有一个初始化的值。
+
+python中对象实例化由解释器自动处理，使用**\_\_init\_\_ **根据需要初始化属性。
+
+#### 6.object中的dunder方法和 \_\_init\_\_方法
+
+所有python类都自动继承object类，dunder方法来自object中继承的方法。同时也可以自己实现来进行覆盖。
+
+创建一个新对象时，提供给类的所以参数会传递到\_\_init\_\_ 方法
+
+```python
+class CountFromBy:
+    def increase(self) -> None:
+        self.val += self.incr
+
+    def __init__(self, v: int, i: int) -> None:
+        self.val = v
+        self.incr = i
+
+c = CountFromBy(100, 1)
+```
 
 
-### 二 级刑庭
+
+### 二 级
